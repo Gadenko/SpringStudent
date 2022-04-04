@@ -24,4 +24,13 @@ public class StudentRepo {
     public List<Student> getAllStudents(){
         return List.copyOf(students.values());
     }
+
+    public void deleteStudent(String id){
+        students.remove(id);
+    }
+
+    public Student updateStudent(Student student, String id) {
+        students.put(id, student);
+        return student;
+    }
 }

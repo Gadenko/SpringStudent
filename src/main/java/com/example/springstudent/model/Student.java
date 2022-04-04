@@ -2,8 +2,8 @@ package com.example.springstudent.model;
 
 public class Student {
 
-    public String name;
-    public String id;
+    private String name;
+    private String id;
 
     public Student(String name, String id) {
         this.name = name;
@@ -25,4 +25,5 @@ public class Student {
     public void setId(String id) {
         this.id = id;
     }
+
 }

@@ -15,6 +15,10 @@ public class StudentenService {
         return repo.getById(id);
     }
 
+    public void deleteStudent(String id){
+        repo.deleteStudent(id);
+    }
+
     public Student addStudent(Student student){
         return repo.addStudent(student);
     }
@@ -23,4 +27,7 @@ public class StudentenService {
         return repo.getAllStudents();
     }
 
+    public Student updateStudent(Student student, String id) {
+        return repo.updateStudent(student,id);
+    }
 }
