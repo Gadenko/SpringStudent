@@ -10,7 +10,13 @@ import java.util.List;
 @RequestMapping("student")
 public class StudentController {
 
-    StudentenService service = new StudentenService();
+    //StudentenService service = new StudentenService();
+
+    private final StudentenService service;
+
+    public StudentController(StudentenService service) {
+        this.service = service;
+    }
 
     @GetMapping
     public List<Student> getAllStudents(){
