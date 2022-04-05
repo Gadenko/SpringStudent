@@ -2,6 +2,7 @@ package com.example.springstudent.Service;
 
 import com.example.springstudent.Repo.StudentRepo;
 import com.example.springstudent.model.Student;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,7 +10,11 @@ import java.util.List;
 @Service
 public class StudentenService {
 
-    StudentRepo repo = new StudentRepo();
+    private final StudentRepo repo;
+    @Autowired
+    public StudentenService(StudentRepo repo) {
+        this.repo = repo;
+    }
 
     public Student getStudentById(String id){
         return repo.getById(id);

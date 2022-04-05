@@ -1,11 +1,12 @@
 package com.example.springstudent.Repo;
 
 import com.example.springstudent.model.Student;
+import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+@Service
 public class StudentRepo {
 
     Map<String, Student> students = new HashMap<>();
