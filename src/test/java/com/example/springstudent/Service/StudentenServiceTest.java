@@ -1,19 +1,17 @@
-package com.example.springstudent.controller;
+package com.example.springstudent.Service;
 
 import com.example.springstudent.Repo.StudentRepo;
-import com.example.springstudent.Service.StudentenService;
 import com.example.springstudent.model.Student;
 import org.junit.jupiter.api.Test;
-
-import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-class StudentControllerTest {
+class StudentenServiceTest {
 
     private StudentRepo studentenRepo = mock(StudentRepo.class);
     private StudentenService studentenService = new StudentenService(studentenRepo);
+
 
     @Test
     void getStudentById_whenId1_thenReturnStudentWithId() {
